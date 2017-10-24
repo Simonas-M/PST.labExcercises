@@ -1,0 +1,338 @@
+\section{Testavimo atvėjai}
+
+\begin{table}[h]
+  \centering
+  \label{table:TA001}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA001                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti ar slapyvardžio įvedimas atitinka reikalavimus              \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                \\ \hline
+    Vykdymo žingsniai   & Įvedamas slapyvardis iš daugiau nei 16 simbolių                        \\ \hline
+    Laukiami rezultatai & Sistema turėtų neleisti įvesti daugiau nei 16 simbolių                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                        \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                       \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti daugiau nei 16 simbolių \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA001}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA002}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA002                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti ar vardo įvedimas atitinka reikalavimus                     \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                \\ \hline
+    Vykdymo žingsniai   & Įvedamas slapyvardis iš daugiau nei 16 simbolių                        \\ \hline
+    Laukiami rezultatai & Sistema turėtų neleisti įvesti daugiau nei 16 simbolių                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                        \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                       \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti daugiau nei 16 simbolių \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA002}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA003}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA003                                                                         \\ \hline
+    Trumpas aprašymas   & Patikrinti ar IRC serverio adreso įvedimas atitinka reikalavimus              \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                       \\ \hline
+    Vykdymo žingsniai   & Įvedamas neteisingas serverio adresas: „testaddress“                          \\ \hline
+    Laukiami rezultatai & Sistema turėtų informuoti, kad įvestas adresas yra netinkamas                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                               \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                              \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti neteisingą IRC serverio adresą \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA003}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA004}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA004                                                                                 \\ \hline
+    Trumpas aprašymas   & Patikrinti ar IRC serverio port'o skaičius atitinka reikalavimus                      \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                               \\ \hline
+    Vykdymo žingsniai   & Įvedamas neteisingas serverio port'o skaičius: „ne skaičius“                          \\ \hline
+    Laukiami rezultatai & Sistema turėtų informuoti, kad įvestas sererio port'o skaičius yra netinkamas         \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                       \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                                      \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti neteisingą IRC serverio port'o skaičių \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA004}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA005}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA005                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti ar kanalo įvedimas atitinka reikalavimus                    \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                \\ \hline
+    Vykdymo žingsniai   & Įvedamas kanalo pavadinimas iš daugiau nei 16 simbolių                 \\ \hline
+    Laukiami rezultatai & Sistema turėtų neleisti įvesti daugiau nei 16 simbolių                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                        \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                       \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti daugiau nei 16 simbolių \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA005}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA006}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA006                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti prisijungimą prie naujo kanalo                              \\ \hline
+    „Prieš sąlygos“     & Įjungiamas IRC klientas                                                \\ \hline
+    Vykdymo žingsniai   & Įvedamas kanalo pavadinimas iš daugiau nei 16 simbolių                 \\ \hline
+    Laukiami rezultatai & Sistema turėtų neleisti įvesti daugiau nei 16 simbolių                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                        \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                       \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema leidžia įvesti daugiau nei 16 simbolių \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA006}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA007}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA007                                                                                                   \\ \hline
+    Trumpas aprašymas   & Patikrinti prisijungimą prie naujo kanalo                                                               \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & Vykdoma funkcija '/join \#freenode'                                                                     \\ \hline
+    Laukiami rezultatai & Prisijungta prie \#freenode kanalo                                                                      \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema prijungta prie \#freenode kanalo                                        \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA007}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA008}
+  \begin{tabular}{|l|l|}
+    \hline    
+    ID                  & TA008                                                                                                   \\ \hline
+    Trumpas aprašymas   & Patikrinti prisijungimą prie naujo neegzistuojančio kanalo                                              \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & Vykdoma funkcija '/join \#non-existing-channel'                                                         \\ \hline
+    Laukiami rezultatai & Pranešama apie netinkamą kanalą                                                                         \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema praneša apie netinkamą kanalą                                           \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA008}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA009}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA009                                                                                                                                                                   \\ \hline
+    Trumpas aprašymas   & Patikrinti sistemos būseną bandant prisijungti prie jau prijungto kanalo                                                                                                \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                                                 \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\ 2. Vykdoma funkcija '/join \#freenode'\\ 3. Patikrinamas kanalų sąrašas\end{tabular} \\ \hline
+    Laukiami rezultatai & \#freenode kanalas turėtų būti paminėtas vieną kartą                                                                                                                    \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}\#freenode paminėtas tiktais vieną kartą                                                                                                        \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA009}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA010}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0010                                                                                                                                                                                   \\ \hline
+    Trumpas aprašymas   & Patikrinti sistemos būseną bandant prisijungti prie jau prijungto kanalo                                                                                                                 \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                                                                  \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\ 2. Vykdoma funkcija '/join \#naujas'\\ 3. Vykdoma funkcija '/channel'\\ 4. Pasirenkama 'naujas' kanalas\end{tabular} \\ \hline
+    Laukiami rezultatai & Sistema perjungia kanalą iš '\#freenode' į '\#naujas'                                                                                                                                    \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                                                          \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                                                                                                         \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema persijungė i kanalą '\#naujas'                                                                                                                           \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA010}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA011}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0011                                                                                                                                                                                        \\ \hline
+    Trumpas aprašymas   & Patikrinti atsijungimą nuo kanalo                                                                                                                                                             \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                                                                       \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\ 2. Vykdoma funkcija '/join \#naujas'\\ 3. Vykdoma funkcija '/part \#naujas'\\ 4. Vykdoma funkcija '/channel'\end{tabular} \\ \hline
+    Laukiami rezultatai & Sistemoje matomas tik vienas prijungtas kanalas                                                                                                                                               \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                                                               \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                                                                                                              \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistemoje matomas tik vienas prijungtas kanalas                                                                                                                       \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA011}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA012}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0012                                                                                                                                                   \\ \hline
+    Trumpas aprašymas   & Patikrinti kanalo pasirinkimą kai atsijungiama nuo visų kanalų                                                                                           \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                                  \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\ 2. Vykdoma funkcija '/part \#freenode'\\ 3. Vykdoma funkcija '/channel'\end{tabular} \\ \hline
+    Laukiami rezultatai & Sistema praneša, jog nėra prijungtų kanalų                                                                                                               \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                          \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                                                                                                         \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema pakimba                                                                                                                  \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA012}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA013}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0013                                                                                                                                 \\ \hline
+    Trumpas aprašymas   & Patikrinti sistemos būseną bandant atsijungti nuo paskutinio kanalo                                                                    \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\textbackslash\\ 2. Vykdoma funkcija '/part \#freenode'\end{tabular} \\ \hline
+    Laukiami rezultatai & Sistema baigia darbą                                                                                                                   \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                        \\ \hline
+    Būsena              & Įvykdytas - rezultatas neigiamas                                                                                                       \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Sistema nebaigė darbo                                                                                          \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA013}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA014}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0014                                                                                                                                                                                                                            \\ \hline
+    Trumpas aprašymas   & Patikrinti sistemos būseną atsijungiant nuo dabartinio aktyvaus kanalo                                                                                                                                                            \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular}                                                                                                                           \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1. Vykdoma funkcija '/join \#freenode'\\ 2. Vykdoma funkcija '/join \#naujas'\\ 3. Vykdoma funkcija '/channel'\\ 4. Pasirenkamas '\#naujas' kanalas\\ 5.Vykdoma funkcija '/part \#naujas'\end{tabular} \\ \hline
+    Laukiami rezultatai & Sistema automatiškai perjungia kanalą į pirmą rastą iš prijungtų                                                                                                                                                                  \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                                                                                                   \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                                                                                                                                                  \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema automatiškai perjungė kanalą į pirmą iš prijungtų                                                                                                                                                 \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA014}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA015}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0015                                                                                                                                                                           \\ \hline
+    Trumpas aprašymas   & Patikrinti privačios žinutės siuntimą                                                                                                                                            \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\\ 3. Įjungiamas naujas IRC klientas\\ 4. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & \begin{tabular}[c]{@{}l@{}}1.Pirmame IRC kliente vykdoma funkcija\\ '/privmsg \{antro IRC kliento slapyvardis\} \{žinutė\}'\end{tabular}                                         \\ \hline
+    Laukiami rezultatai & Antro IRC kliento lange turi pasimatyti siųsta žinutė                                                                                                                            \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                                                                                                  \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                                                                                                 \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{FF0000}Antro IRC kliento lange galime matyti siųstą žinutę                                                                                                      \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA015}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA016}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0016                                                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti /invite komandos veikimą                                                                     \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & 1.Vykdoma komanda '/invite test\_user \#channel'                                                        \\ \hline
+    Laukiami rezultatai & Sistema praneša apie išsiųstą pakvietimą                                                                \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema pranešė apie pakvietimo išsiuntimą                                      \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA016}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA017}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0017                                                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti /kick komandos veikimą                                                                       \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & 1.Vykdoma komanda '/kick \#channel test\_user'                                                          \\ \hline
+    Laukiami rezultatai & Sistema praneša apie išmetimo rezultatą                                                                 \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema pranešė išmetimo rezultatą                                              \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA017}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \label{table:TA018}
+  \begin{tabular}{|l|l|}
+    \hline
+    ID                  & TA0018                                                                                                  \\ \hline
+    Trumpas aprašymas   & Patikrinti /help komandos veikimą                                                                       \\ \hline
+    „Prieš sąlygos“     & \begin{tabular}[c]{@{}l@{}}1. Įjungiamas IRC klientas\\ 2. Prisijungiama prie IRC serverio\end{tabular} \\ \hline
+    Vykdymo žingsniai   & 1.Vykdoma komanda '/help'                                                                               \\ \hline
+    Laukiami rezultatai & Sistema parodo vartotojui pagalbos gaires                                                               \\ \hline
+    Vykdytojas          & Simonas Mikulis                                                                                         \\ \hline
+    Būsena              & Įvykdytas - rezultatas teigiamas                                                                        \\ \hline
+    Vykdymo rezultatas  & \cellcolor[HTML]{32CB00}Sistema parodė pagalbos gaires                                                  \\ \hline
+  \end{tabular}
+  \caption{Testavimo atvėjis - TA018}
+\end{table}
+
+
+\subsection{Reikalavimų ir testavimo atvejų atsekamumo matrica}
+
+\begin{table}[h]
+  \centering
+  \label{table:matrica}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+          & 1.1 & 1.2 & 1.3 & 1.4 & 1.5 & 2.1 & 2.2 & 2.3 & 3.1 & 3.2 & 3.3 & 3.4 & 3.5 & 3.6 \\ \hline
+    TA001 & X   &     &     &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA002 &     & X   &     &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA003 &     &     & X   &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA004 &     &     &     & X   &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA005 &     &     &     &     & X   &     &     &     &     &     &     &     &     &     \\ \hline
+    TA006 &     &     &     &     &     & X   &     &     &     &     & X   &     &     &     \\ \hline
+    TA007 &     &     &     &     &     & X   &     &     &     &     & X   &     &     &     \\ \hline
+    TA008 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA009 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA010 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA011 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA012 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA013 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA014 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA015 &     &     &     &     &     &     &     &     & X   &     &     &     &     &     \\ \hline
+    TA016 &     &     &     &     &     &     &     &     &     &     &     & X   &     &     \\ \hline
+    TA017 &     &     &     &     &     &     &     &     &     &     &     &     & X   &     \\ \hline
+    TA018 &     &     &     &     &     &     &     &     &     &     &     &     &     & X   \\ \hline
+  \end{tabular}
+  \caption{Reikalavimų ir testavimo atvejų atsekamumo matrica}
+\end{table}

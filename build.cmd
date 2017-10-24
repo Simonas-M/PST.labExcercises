@@ -1,0 +1,11 @@
+xelatex kursinis.tex
+biber kursinis
+xelatex kursinis.tex
+start kursinis.pdf
+del kursinis.aux
+del kursinis.bbl
+del kursinis.bcf
+del kursinis.blg
+del kursinis.log
+del kursinis.run.xml
+del kursinis.toc
