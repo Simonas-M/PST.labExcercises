@@ -1,6 +1,32 @@
-\section{Reikalavimų padengimas}
+\subsection{Reikalavimų ir testavimo atvejų atsekamumo matrica}
 
-Reikalavimų padengimo lentelė yra sudaryta naudojantis funkciniais ir nefunkciniaissistemos reikalavimais.
-Reikalavimų ir testavimo atvejų ryšys yra pavaizduotas ţemiau esančioje atsekamumo matricoje.
+Pateikiama atsekamumo matrica \ref{table:matrica}, kuri parodo ryšį tarp reikalavimų ir testavimo atvejų.
+Sudarant šią matricą pasiekiamas tikslas, jog kiekvieną reikalavimą padengtų bent vienas testavimo atvejis.
 
-*** Insert table matrix here ***
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+          & 1.1 & 1.2 & 1.3 & 1.4 & 1.5 & 2.1 & 2.2 & 2.3 & 3.1 & 3.2 & 3.3 & 3.4 & 3.5 & 3.6 \\ \hline
+    TA001 & X   &     &     &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA002 &     & X   &     &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA003 &     &     & X   &     &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA004 &     &     &     & X   &     &     &     &     &     &     &     &     &     &     \\ \hline
+    TA005 &     &     &     &     & X   &     &     &     &     &     &     &     &     &     \\ \hline
+    TA006 &     &     &     &     &     & X   &     &     &     &     & X   &     &     &     \\ \hline
+    TA007 &     &     &     &     &     & X   &     &     &     &     & X   &     &     &     \\ \hline
+    TA008 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA009 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA010 &     &     &     &     &     &     & X   &     &     &     & X   &     &     &     \\ \hline
+    TA011 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA012 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA013 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA014 &     &     &     &     &     &     &     & X   &     & X   & X   &     &     &     \\ \hline
+    TA015 &     &     &     &     &     &     &     &     & X   &     &     &     &     &     \\ \hline
+    TA016 &     &     &     &     &     &     &     &     &     &     &     & X   &     &     \\ \hline
+    TA017 &     &     &     &     &     &     &     &     &     &     &     &     & X   &     \\ \hline
+    TA018 &     &     &     &     &     &     &     &     &     &     &     &     &     & X   \\ \hline
+  \end{tabular}
+  \caption{Reikalavimų ir testavimo atvejų atsekamumo matrica}
+  \label{table:matrica}
+\end{table}
