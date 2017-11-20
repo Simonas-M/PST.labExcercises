@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build latex",
+            "isBackground": true,
+            "type": "shell",
+            "command": "xelatex -interaction nonstopmode PST_1; xelatex -interaction nonstopmode PST_1; start PST_1.pdf",
+            "problemMatcher": [],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          }
+    ]
+}
