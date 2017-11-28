@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+
+# Added at 2017-11-28 23:27:20 +0200 by root:
+gem "mutant-rspec"
+
+# Added at 2017-11-28 23:36:47 +0200 by root:
+gem "rspec", "~> 3.6"
