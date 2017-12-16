@@ -1,0 +1,275 @@
+%Testavimo planas pagal IEEE 829-1998
+
+\section{Testavimo plano identifikatorius}
+
+Šio testavimo plano unikalus ID: PST.TP.1.  Versija - 1.1.
+
+Plano autorius: 
+Margiris Strakšys (Programų Sistemos, 3 kursas 5 grupė)
+
+Kontaktinė informacija:
+Elektroninis paštas: margiris.straksys@mif.stud.vu.lt
+
+\section{Dokumentai ir nuorodos į juos}
+
+Užduoties pobūdis:
+
+Standartizuoto protokolo kliento (POP3,IMAP4,IRC,...) realizacija
+Dokumento versija: 1.
+
+HTTP 1.1 Standarto specifikacija:
+
+https://tools.ietf.org/html/rfc2616
+Standarto versija: 1.1.
+
+Pradiniai užduoties reikalavimai:
+
+\begin{itemize}
+	\item Programa turi veikti
+	\item Kodas turi būti pakomentuotas
+	\item Studentas turi sugebėti paaiškinti ką kiekviena kodo dalis daro. Taip pat jei reikia paredaguoti ir sukompiliuoti savo programą
+	\item Galutinis užduoties įvertinimas yra mažinamas po 0.2 balo už kiekvieną pavėluotą savaitę
+\end{itemize}
+Dokumento versija: 1.
+
+Sistemos darymo metu išsikelta reikalavimų specifikacija:
+
+\begin{enumerate}
+	\item Programa turi atpažinti ar įvestis yra URL formato.
+	\item Programa turi apdoroti 2** kodų grupę, atsiųsdama failą.
+	\item Gavus 3** grupės kodą, programa turi pakeisti failą gavimo vietą ir failą atsiųsti iš kitur.
+	\item Gavus 4** kodą, programa, nesiunčia nieko ir užbaigia veikimą, išspausdindama pranešimą vartotojui.
+	\item Sėkmingai atsiųsti duomenys, turi būti užsaugomi sukuriant failą darbalaukyje.
+	\item Sukuriamam failui turi būti suteiktas iš URL adreso paimamas pavadinimas.
+	\item Sukuriamas failas neturi gadinti, trinti ar kitaip daryti įtaką prieš tai atsiųstiems failams.
+	\item Failas turi būti atsiunčiamas artima į realaus siuntimo greitį sparta.
+\end{enumerate}
+Dokumento versija: 1.
+
+\section{Įžanga}
+
+Šio darbo tikslas susidaryti planą programos „HTTP Downloader” veikimo testavimui atlikti. 
+Pagal šį planą ištestuoti programinę įrangą ir užfiksuoti rastus defektus. 
+Plano lygmuo - „Master“. Planas apima pasirinktos programos testavimą, atitikimą reikalavimams. 
+Biudžeto šiai sistemai nėra, resursai – vienas žmogus, programos kūrėjas ir šio plano autorius. 
+Testavimas pagal šį planą bus vykdomas ne nuo sistemos kūrimo pradžios, nes programa jau egzistuojanti, bet nėra ištestuota. 
+
+\section{Testavimo objektai}
+
+Bus testuojama tai kas pateikiama vartotojui naudotis:
+
+\begin{itemize}
+	\item Programinės įrangos paskutinė turima versija (S lygmuo)
+	\item Klaidų apdorojimas (V ir S lygmuo)
+	\item Veikimas su neteisinga įvestimi (S lygmuo)
+	\item Našumas (V lygmuo)
+\end{itemize}
+
+\section{Programinės įrangos rizikos}
+
+Kadangi kuriama programinė įranga nėra sudėtinga, visos naudojamos išorinės bibliotekos yra patikimos ir tinkamai veikiančios, rizikos nėra plataus masto. 
+Todėl didžiausia rizikų tikimybė yra paskutinės turimos produkto versijoje. 
+Čia gali būti palikta defektų paskutiniuose darytuose pakeitimuose. 
+Taip pat naudojantis programa kyla rizika dėl valstybinių teisės aktų pažeidimų. 
+Testuojant ir naudojant programinę įrangą, galima mėginti atsisiųsti autorių teisių ginamų ir įstatymais uždraustų - nelegalių duomenų.
+
+\section{Testuojamos savybės}
+
+Pagal defektų atsiradimo tikimybę programinės įrangos veikimo metu, rizikos lygmenys yra standartiškai suskirstyti į:
+
+\begin{itemize}
+	\item Žemas
+	\item Vidutinis
+	\item Aukštas
+\end{itemize}
+
+Iš naudoto pusės bus testuojama:
+
+\begin{itemize}
+	\item Įvestis, kuri gali būti netikras, tikras ir iškraipytas internetinis failo patalpinimo adresas. (Rizikos lygmuo – Ž)
+	\item Programos elgsena gavus skirtingų tipų atsakymo į „GET“ užklausą kodų grupę (2**, 3**, 4**). (Rizikos lygmuo – A)
+	\item Atsiųstų duomenų lokalųjį saugojimą kompiuteryje. (Rizikos lygmuo – V)
+\end{itemize}
+
+\section{Netestuojamos savybės}
+
+Iš vartotojo pusės nebus testuojamos senesnės programinės įrangos versijos, tai kas buvo turima iki dabartinės produkto būsenos. 
+Taip yra todėl, kad senesnės versijos nekelia rizikos dabartinės versijos veikimui. 
+Taip pat, nebus testuojamas programos gaunamų duomenų šifravimas (kodavimas), perkodavimas (konvertavimas) į kitas duomenų kodavimo sistemas. 
+Tai nekelia rizikų, nes atsiųstą failą galima vėliau pakonvertuoti į kitą norimą kodavimo sistemą.
+
+\section{Taktika / Priėjimas}
+
+Kadangi prie šio projekto dirba ir programos kūrimu užsiima vienas žmogus, tai vienas atliks ir testavimą.
+
+Programos kūrimui ir testavimui naudojami įrankiai nėra plataus mąsto: Visual Studio 2017 darbo aplinka, C\# programavimo kalba bei Windows 10 operacinė sistema. 
+Įrankiai gerai žinomi ir išmanomi, todėl papildomų mokymų nereikės. 
+
+Testavimo metu bus pagal išsikeltą reikalavimų specifikaciją kuriami testavimo atvejai, jie įgyvendinami. 
+Scenarijų vykdymo metu gaunami rezultatai kaupiami. 
+Bus fiksuojamos sąlygos atvejui įgyvendinti, vykdymo žingsniai, rezultatai ir būsenos. 
+Metrikas sudarys teigiamų ir neigiamų rezultatų būsenų santykis su testavimo atvejų kiekiu. 
+
+Programinė įranga testavimui atlikti naudojama standartinė: Visual Studio 2017 aplinka, su standartinėmis bibliotekomis skirtomis: URI konstravimui, TCP kliento ryšiui su serveriu užmegzti, gautų duomenų išsaugojimui faile. 
+
+Programos kūrimo metu, atsiradus naujiems didesnės apimties pakeitimams, bus atliekami regresiniai testai. 
+Bus testuojama iki tol testuota sistemos dalis bei paruošiami nauji testai naujausiai versijai testuoti. 
+
+Neištestuoti reikalavimai paliekami testuoti vėlesniam laikui (tolimesnio sistemos kūrimo metu arba aukštesnio lygmens testavimo metu). 
+Tai ko nepavyks arba nebus žinoma kaip ištestuoti, bus paliekama netestuota iki susitikimo su atsiskaitymą vertinančiu dėstytoju aptarimo metu. 
+
+Susitikimai nėra organizuojami, nes prie sistemos dirba tik vienas žmogus. 
+Vienintelis susitikimas atliekamas atsiskaitymo ir aptarimo su dėstytoju metu.
+
+Defektų valdymo proceso aprašas:
+
+Testavimo metu randami defektai bus kaupiami ir registruojami. 
+Kiekvienam defektui suteikiamas unikalus ID, jo kilimui nustatyti ir taisyti bus sudaromas defekto aprašas, poveikio lygmuo, testavimo atvejo ID, kurio metu defektas užfiksuotas bei rekomendacijos defekto pašalinimui.
+
+Pagal poveikį programinės įrangos veikimui, defektai yra suskirstyti į:
+
+\begin{itemize}
+	\item Svarbus - defektas trukdo programai teisingai atlikti esmines funkcijas. Kilus šio tipo programos
+	veikimo sutrikimui, programa dalimi atvejų veiks kitaip negu numatyta reikalavimuose,
+	gali duomenų visai neatsiųsti ar gadinti kitus teisingai gautus duomenis.
+	\item Vidutinis - defektas trukdo programai teisingai atlikti pagalbines funkcijas. Kilus šio tipo
+	programos veikimo sutrikimui, programa dalimi atvejų gali veikti neefektyviai, lėčiau negu
+	turėtų ar prarasti dalį pasikartojančių duomenų, dublikatų.
+\end{itemize}
+
+\section{Sėkmingo / Nesėkmingo testavimo kriterijai}
+
+Testavimo atvejis yra laikomas sėkmingu, kai jo vykdymo metu nekyla jokie defektai, tikimasis atvejo rezultatas sutampa su atvejo vykdymo rezultatu. 
+Kitu atveju, laikoma nesėkmingu, fiksuojamas defektas.
+
+Testavimo etapas laikomas sėkmingu, kai yra įvykdomi visi (100%) testavimo atvejai, kodo padengimo testais yra virš 90%, užfiksuotų defektų skaičius neviršija 10% testavimo atvejų, jų kritiškumas yra vidutinis arba jų pašalinimas galimas kito testavimo lygmens metu. 
+Kitu atveju, laikoma nesėkmingu, šalinami aptikti defektai.
+
+Projekto testavimas laikomas sėkmingu, kai yra pilnai įvykdyti visų etapų testavimo planai, neištaisytų defektų yra ne daugiau kaip 10% ir jų kritiškumas nėra svarbus. 
+Kitu atveju, laikoma nesėkmingu, toliau šalinami aptikti defektai, vykdomi etapų testavimo planai.
+
+\section{Sustabdymo ir pratęsimo kriterijai}
+
+Stabdymas daromas, jei defektų kiekis testavimo etapo metu viršija 30% lyginant su testavimo atvejų kiekiu. 
+Stabdymo laikotarpis priklauso, nuo kaip toli atsiskaitymo laikotarpio pabaiga, jei laiko dar daug (daugiau negu savaitė) defektai šalinami, kol jų lieka mažiau nei 10% ir nėra svarbių defektų, jei laiko mažai, kol bendras visų defektų kiekis nebeviršija 20%.
+
+\section{Planuojami darbo produktai}
+
+Darbo metu planuojami: 
+
+\begin{itemize}
+	\item Sudarytas testavimo planas
+	\item Sukurti testavimo atvejai, padengiantys bent 90% kodo ir visus testavimo objektus
+	\item Testavimo atvejų vykdymo, defektų aptikimo ir jų šalinimo rekomendacijų analizės žurnalas
+\end{itemize}
+
+\section{Likusios testavimo užduotys}
+
+Testavimą vykdo vienintelis žmogus, kuris ir kuria testavimo planą, todėl likusias užduotis jis ir vykdys:
+
+\begin{itemize}
+	\item Sukurti testavimo atvejus
+	\item Įgyvendinti testavimo atvejus
+	\item Užfiksuoti ir aprašyti aptiktus defektus
+	\item Aprašyti defektų šalinimo rekomendacijas
+\end{itemize}
+
+\section{Reikalingos aplinkos}
+
+Testavimui atlikti reikalingos aplinkos yra: operacinė aplinka Windows (viena iš versijų: 7, 8, 8.1, 10), Microsoft Visual Studio (viena iš versijų: 2015, 2017) ir jos bibliotekos. 
+Testavimui skirti failai, esantys patalpinti internete ir pasiekiami per URL adresą. 
+Papildomų programinės įrangos reikmių nėra.
+
+\section{Kompetencijų ir mokymų poreikiai}
+
+Sistemos kūrimui ir testavimui atlikti reikalinga žinoti ir mokėti dirbti su C\# programavimo kalba, .NET karkasu (angl. Framework). 
+Testuojamos sistemos ir įrankių naudojimo mokymų nėra reikiamybės daryti, nes prie sistemos dirba tik vienas žmogus, kuris tai turi pakankamai išmanyti.
+
+\section{Atsakomybės}
+
+Kadangi prie sistemos dirba vienas žmogus, jis ir yra atsakingas už visus pateikiamus kriterijus: 
+
+\begin{itemize}
+	\item Rizikų valdymą
+	\item Testuojamas ir netestuojamas savybes
+	\item Testavimo taktiką
+	\item Testavimo etapų nustatymą ir aprašymą
+	\item Testavimo atvejų sukūrimą
+	\item Aplinkas
+	\item Grafiko problemų sprendimą
+	\item Kompetencijas, žinių turėjimą
+	\item Kritinius sprendimus, neapibrėžtus testavimo plane
+	\item Testavimo rezultatų rinkimą ir registravimą
+\end{itemize}
+
+\section{Grafikas}
+
+Testavimo plano vykdymo grafikas yra pateikiamas pagrįstas realistiškais ir patikrintais įvertinimais.
+Darbo vykdymo laikas nurodomas ne konkrečiomis datomis, o susietas su programavimo, testavimo rezultatais ir prieš tai esančių žingsnių vykdymu.
+
+\begin{itemize}
+	\item Iš dėstytojo gautų, pradinių reikalavimų peržiūra.
+	\item Reikalavimų specifikacijos sudarymas, prasideda valanda po pradinių reikalavimų peržiūros.
+	\item „Master“ lygmens testavimo plano sudarymas, diena po reikalavimų specifikacijos sudarymo.
+	\item Testavimo etapų planavimas ir valdymas, valanda po pagrindinio testavimo plano sudarymo.
+	\item Testavimo atvejų kūrimas ir analizė, prasideda diena po visų testavimo planų sudarymo.
+	\item Vienetų testavimo vykdymas, daromas sistemos surikimo metu, diena po to, kai paruošiami testavimo atvejai.
+	\item Integracijos, sistemos ir priėmimo testavimo vykdymas, diena po sistemos surinkimo pabaigos.
+	\item Rezultatų rinkimas, registravimas ir kaupimas, vykdomas testavimo metu.
+	\item Rezultatų vertinimas ir ataskaitų rengimas, prasideda valanda po rezultatų surinkimo pabaigos.
+\end{itemize}
+
+Nukrypus nuo grafiko spartinimas grafiko vykdymas, žingsniai kurie turėtų būti pradedami vykdyti diena po prieš tai esančio žingsnio pabaigimo, pradeda tą pačią dieną. 
+Stengiamasi išlaikyti nukrypimą kuo mažesnį, bei nenukrypti nuo grafiko dar labiau su tolimesnių testavimo proceso žingsnių vykdymu. 
+Jeigu nukrypimas  nuo grafiko vis dar yra likus savaitei iki atsiskaitymo datos, atsižvelgiama į „Stabdymo ir pratęsimo“ metu nurodytus lengvatinius kriterijus sistemos galutiniam ištestavimui.
+
+\section{Rizikos ir nenumatyti atvejai}
+
+Jeigu trūks žmonių ar mokymų, nieko pakeisti neįmanoma. Darbą atlieka vienas žmogus, todėl papildomai prie darbo su sistema pakviesti negalima ir vykdyti mokymų neapsimoka. 
+
+Jeigu trūks įrankių, duomenų ar žinių likus savaitei iki atsiskaitymo datos, bus sumažintas atliekamų testų skaičius, prailginamos darbo valandos, kad įgyti papildomų žinių, gauti reikiamų duomenų ir įrankių.
+
+Jeigu vėluos programavimas, likus savaitei iki atsiskaitymo datos, bus sumažintas atliekamų testų skaičius, padidintas priimtinas defektų skaičius, prailginamos darbo valandos. Viso to būtų imamasi, kad visi darbai būtų pilnai užbaigti iki atsiskaitymo datos.
+
+Jeigu keisis reikalavimai, likus savaitei iki atsiskaitymo datos, nukelta testavimo pabaigos data viena diena tolyn, padidintas priimtinas defektų skaičius, prailginamos darbo valandos. Viso to būtų imamasi, kad iki atsiskaitymo datos, būtų užtikrintas atitikimas visiems pasikeitusiems reikalavimams.
+
+\section{Patvirtinimai}
+
+Testavimo plano korektiškumą patvirtins jo sudarymui vadovaujantis dėstytojas (darbo vadovas).
+
+\section{Žodynėlis}
+
+Sąvokos:
+
+\begin{itemize}
+	\item HTTP 1.1 Standartas - standartinis būdas informacijai pasauliniame internetiniame tinkle (WWW) pasiekti. 
+		  Pradinė protokolo paskirtis – pateikti standartinį būdą HTML puslapiams skelbti ir skaityti.
+	\item Pasaulinis internetinis tinklas (WWW) - interneto dalis, resursai, kuriuos internete galima pasiekti naudojant URL (Vieningus Resursų Identifikatorius).
+		  Pasaulinis tinklas daugiausia remiasi hipertekstu – HTTP protokolu ir HTML kalba.
+	\item Hiperteksto žymėjimo kalba (HTML) - tai kompiuterinė žymėjimo kalba, naudojama pateikti turinį internete.
+	\item Dokumento adreso lokatorius (URL) - tai unikalus adresas, nurodantis kur yra patalpintas internetinis puslapis ir kaip jį pasiekti.
+	\item ,,Master'' lygmuo - Testavimo plano lygmuo, nurodantis, kaip bus vykdomas visas testavimo planas bei kad bus kuriami testavimo etapų planai.
+	
+\end{itemize}
+
+Sutrumpinimai:
+
+\begin{itemize}
+	\item HTTP - trumpinys iš angl. HyperText Transfer Protocol
+	\item WWW - trumpinys iš angl. World Wide Web
+	\item HTML - trumpinys iš angl. Hyper text Markup Language
+	\item URL - trumpinys iš angl. Uniform Resource Locator
+	\item Testavimo lygmenys:
+		\begin{itemize}
+			\item V - vienetų
+			\item I - integracijos
+			\item S - sistemos
+			\item P - priėmimo
+		\end{itemize}
+	\item Rizikų lygmenys:
+		\begin{itemize}
+			\item Ž - žemas
+			\item V - vidutinis
+			\item A - aukštas
+		\end{itemize}
+\end{itemize}
