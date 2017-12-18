@@ -91,58 +91,38 @@ Tuo pačiu nebus švaistomas brangus programos kūrimo laikas, kuris bus panaudo
 
 Pagal 'Agile' metodologiją, nustatoma, kad sprintas truks 2 savaites.
 Kiekvieno sprinto pabaigoje bus įvykdomas demo ir retrospektyvos,
-kurių metu bus aptariamos praėjusio sprinto teigiami ir neigiami aspektai.
+ kurių metu bus aptariamos praėjusio sprinto teigiami ir neigiami aspektai.
+Programinės įrangos kurimo procese bus naudojama TDD praktika - pra
 Kadangi prie sistemos dirbs tik du žmonės kasdieniniai susitikimai bus pakeisti pokalbiais prie kavos.
-
-Sistemos kūrimui naudosime: IntelliJ IDEA Ultimate, Git, MongoDB, JavaScript, Windows 10 bei Ubuntu operacines sistemas.
-
+Už programos testų rašymą bus atsakingi programuotojai.
 
 
-
-
-
-
-
-
-
-
-
-
-Kadangi prie šio projekto dirba ir programos kūrimu užsiima vienas žmogus, tai vienas atliks ir testavimą.
-
-Programos kūrimui ir testavimui naudojami įrankiai nėra plataus mąsto: Visual Studio 2017 darbo aplinka, C\# programavimo kalba bei Windows 10 operacinė sistema. 
+Sistemos kūrimui : IntelliJ IDEA Ultimate, Git, MongoDB, JavaScript, Windows 10 bei Ubuntu operacines sistemas.
 Įrankiai gerai žinomi ir išmanomi, todėl papildomų mokymų nereikės. 
 
-Testavimo metu bus pagal išsikeltą reikalavimų specifikaciją kuriami testavimo atvejai, jie įgyvendinami. 
-Scenarijų vykdymo metu gaunami rezultatai kaupiami. 
-Bus fiksuojamos sąlygos atvejui įgyvendinti, vykdymo žingsniai, rezultatai ir būsenos. 
-Metrikas sudarys teigiamų ir neigiamų rezultatų būsenų santykis su testavimo atvejų kiekiu. 
-
-Programinė įranga testavimui atlikti naudojama standartinė: Visual Studio 2017 aplinka, su standartinėmis bibliotekomis skirtomis: URI konstravimui, TCP kliento ryšiui su serveriu užmegzti, gautų duomenų išsaugojimui faile. 
-
-Programos kūrimo metu, atsiradus naujiems didesnės apimties pakeitimams, bus atliekami regresiniai testai. 
-Bus testuojama iki tol testuota sistemos dalis bei paruošiami nauji testai naujausiai versijai testuoti. 
-
-Neištestuoti reikalavimai paliekami testuoti vėlesniam laikui (tolimesnio sistemos kūrimo metu arba aukštesnio lygmens testavimo metu). 
-Tai ko nepavyks arba nebus žinoma kaip ištestuoti, bus paliekama netestuota iki susitikimo su atsiskaitymą vertinančiu dėstytoju aptarimo metu. 
-
-Susitikimai nėra organizuojami, nes prie sistemos dirba tik vienas žmogus. 
-Vienintelis susitikimas atliekamas atsiskaitymo ir aptarimo su dėstytoju metu.
+Programinės įrangos kurimo procese bus renkamos šios metrikos: fuckcijų sudėtingumas, kodo padengimas testais.
+Sistemos konfiguracija bus valdoma konfiguraciniais failais,
+ kūrimo, testavimo ir produkcinėms aplinkoms bus sukūrtos atskiros konfiguracijos, bus testuojama visose aplinkose.
+Sukurta sistema bus testuojama šiomis naršyklėmis: Mozilla Firefox, Google Chrome, Safari.
+Išleidus naują programos versiją bus atliekami regresiniai testai sistemos našumui,
+ patikimumui ir ankstesnės sistemos versijos funkcionalumui.
+Naujam funkcionalumui testuoti bus rašomi vienetų testai. 
 
 Defektų valdymo proceso aprašas:
 
 Testavimo metu randami defektai bus kaupiami ir registruojami. 
-Kiekvienam defektui suteikiamas unikalus ID, jo kilimui nustatyti ir taisyti bus sudaromas defekto aprašas, poveikio lygmuo, testavimo atvejo ID, kurio metu defektas užfiksuotas bei rekomendacijos defekto pašalinimui.
+Kiekvienam defektui suteikiamas unikalus ID, jo kilimui nustatyti ir taisyti bus sudaromas defekto aprašas, poveikio lygmuo, 
+ testavimo atvejo ID, kurio metu defektas užfiksuotas, bei norima programos elgsena.
 
 Pagal poveikį programinės įrangos veikimui, defektai yra suskirstyti į:
 
 \begin{itemize}
 	\item Svarbus - defektas trukdo programai teisingai atlikti esmines funkcijas. Kilus šio tipo programos
 	veikimo sutrikimui, programa dalimi atvejų veiks kitaip negu numatyta reikalavimuose,
-	gali duomenų visai neatsiųsti ar gadinti kitus teisingai gautus duomenis.
+	gali susigadinti dalis programos išsaugotų duomenų.
 	\item Vidutinis - defektas trukdo programai teisingai atlikti pagalbines funkcijas. Kilus šio tipo
-	programos veikimo sutrikimui, programa dalimi atvejų gali veikti neefektyviai, lėčiau negu
-	turėtų ar prarasti dalį pasikartojančių duomenų, dublikatų.
+	programos veikimo sutrikimui, programa dalimi atvejų gali veikti neefektyviai, lėčiau negu turėtų arba užduotį galima įgyvendinti kitu scenarijumi.
+  \item Žemas - defektas netrukdo vartotojui atlikti veiksmų, bet neatitinka programinės įrangos ar vartotojo lukesčių speficikacijos.
 \end{itemize}
 
 \section{Sėkmingo / Nesėkmingo testavimo kriterijai}
@@ -150,16 +130,15 @@ Pagal poveikį programinės įrangos veikimui, defektai yra suskirstyti į:
 Testavimo atvejis yra laikomas sėkmingu, kai jo vykdymo metu nekyla jokie defektai, tikimasis atvejo rezultatas sutampa su atvejo vykdymo rezultatu. 
 Kitu atveju, laikoma nesėkmingu, fiksuojamas defektas.
 
-Testavimo etapas laikomas sėkmingu, kai yra įvykdomi visi (100%) testavimo atvejai, kodo padengimo testais yra virš 90%, užfiksuotų defektų skaičius neviršija 10% testavimo atvejų, jų kritiškumas yra vidutinis arba jų pašalinimas galimas kito testavimo lygmens metu. 
-Kitu atveju, laikoma nesėkmingu, šalinami aptikti defektai.
+Testavimo etapas laikomas sėkmingu, kai yra įvykdomi visi (100\%) testavimo atvejai, 80\% kodo padengta testais. 
 
-Projekto testavimas laikomas sėkmingu, kai yra pilnai įvykdyti visų etapų testavimo planai, neištaisytų defektų yra ne daugiau kaip 10% ir jų kritiškumas nėra svarbus. 
+Projekto testavimas laikomas sėkmingu, kai yra pilnai įvykdyti visų etapų testavimo planai, neištaisytų defektų yra ne daugiau kaip 10\% ir jų kritiškumas nėra svarbus. 
 Kitu atveju, laikoma nesėkmingu, toliau šalinami aptikti defektai, vykdomi etapų testavimo planai.
 
 \section{Sustabdymo ir pratęsimo kriterijai}
 
-Stabdymas daromas, jei defektų kiekis testavimo etapo metu viršija 30% lyginant su testavimo atvejų kiekiu. 
-Stabdymo laikotarpis priklauso, nuo kaip toli atsiskaitymo laikotarpio pabaiga, jei laiko dar daug (daugiau negu savaitė) defektai šalinami, kol jų lieka mažiau nei 10% ir nėra svarbių defektų, jei laiko mažai, kol bendras visų defektų kiekis nebeviršija 20%.
+Stabdymas daromas, jei defektų kiekis testavimo etapo metu viršija 30\% lyginant su testavimo atvejų kiekiu. 
+Testavimas pratesiamas jei defektų kiekis neviršyja 10\% visų testavimo atvejų.
 
 \section{Planuojami darbo produktai}
 
@@ -167,13 +146,13 @@ Darbo metu planuojami:
 
 \begin{itemize}
 	\item Sudarytas testavimo planas
-	\item Sukurti testavimo atvejai, padengiantys bent 90% kodo ir visus testavimo objektus
+	\item Sukurti testavimo atvejai, padengiantys bent 90\% kodo ir visus testavimo objektus
 	\item Testavimo atvejų vykdymo, defektų aptikimo ir jų šalinimo rekomendacijų analizės žurnalas
 \end{itemize}
 
 \section{Likusios testavimo užduotys}
 
-Testavimą vykdo vienintelis žmogus, kuris ir kuria testavimo planą, todėl likusias užduotis jis ir vykdys:
+Testavimą vykdo 2 asmenys, kurie ir kuria testavimo planą bei sistemą, todėl likusias užduotis jie ir vykdys:
 
 \begin{itemize}
 	\item Sukurti testavimo atvejus
@@ -184,14 +163,14 @@ Testavimą vykdo vienintelis žmogus, kuris ir kuria testavimo planą, todėl li
 
 \section{Reikalingos aplinkos}
 
-Testavimui atlikti reikalingos aplinkos yra: operacinė aplinka Windows (viena iš versijų: 7, 8, 8.1, 10), Microsoft Visual Studio (viena iš versijų: 2015, 2017) ir jos bibliotekos. 
-Testavimui skirti failai, esantys patalpinti internete ir pasiekiami per URL adresą. 
-Papildomų programinės įrangos reikmių nėra.
+Testavimui atlikti reikalingos aplinkos yra: operacinė aplinka: Windows 10, MacOS arba Linux destribucija, naršyklė Mozilla Firefox, Google Chrome arba Safari. 
+Testavimui skirti failai pasiekiami per Git versijavimo sistemą. 
 
 \section{Kompetencijų ir mokymų poreikiai}
 
-Sistemos kūrimui ir testavimui atlikti reikalinga žinoti ir mokėti dirbti su C\# programavimo kalba, .NET karkasu (angl. Framework). 
-Testuojamos sistemos ir įrankių naudojimo mokymų nėra reikiamybės daryti, nes prie sistemos dirba tik vienas žmogus, kuris tai turi pakankamai išmanyti.
+Sistemos kūrimui ir testavimui atlikti reikalinga žinoti ir mokėti dirbti su Java 9, Spring Framework, JUnit,
+ MongoDB, JavaScript es6, React 16, Karma, Mocha, Redux, React-router, Postman, Apache JMeter, Selenium Web Driver. 
+Testuojamos sistemos ir įrankių naudojimo mokymai nebus organizuojami, individualiam tobulėjumui galima naudoti PluralSight.
 
 \section{Atsakomybės}
 
