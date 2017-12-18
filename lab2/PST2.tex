@@ -5,100 +5,108 @@
 Šio testavimo plano unikalus ID: PST.TP.1.  Versija - 1.1.
 
 Plano autorius: 
-Margiris Strakšys (Programų Sistemos, 3 kursas 5 grupė)
+Simonas Mikulis (Programų Sistemos, 3 kursas 5 grupė)
+Mantas Petrikas (Programų Sistemos, 3 kursas 5 grupė)
 
 Kontaktinė informacija:
-Elektroninis paštas: margiris.straksys@mif.stud.vu.lt
+Elektroninis paštas: simonas.mikulis@mif.stud.vu.lt
+Elektroninis paštas: mantas.petrikas@mif.stud.vu.lt
+
 
 \section{Dokumentai ir nuorodos į juos}
 
 Užduoties pobūdis:
 
-Standartizuoto protokolo kliento (POP3,IMAP4,IRC,...) realizacija
-Dokumento versija: 1.
+Užduočių valdymo sistema, skirta planuoti ir vykdyti užduotis vadovaujantis 'Agile' metodologija
+Dokumento versija: 1.0
 
-HTTP 1.1 Standarto specifikacija:
+Agile principų specifikacija
+http://www.agilemanifesto.org
+Dokumento versija: 1.0
 
-https://tools.ietf.org/html/rfc2616
-Standarto versija: 1.1.
+Kanban 'Lean' metodo specifikacija
+http://www.everydaykanban,com/what-is-kanban
+Dokumento versija: 1.0
 
-Pradiniai užduoties reikalavimai:
-
-\begin{itemize}
-	\item Programa turi veikti
-	\item Kodas turi būti pakomentuotas
-	\item Studentas turi sugebėti paaiškinti ką kiekviena kodo dalis daro. Taip pat jei reikia paredaguoti ir sukompiliuoti savo programą
-	\item Galutinis užduoties įvertinimas yra mažinamas po 0.2 balo už kiekvieną pavėluotą savaitę
-\end{itemize}
-Dokumento versija: 1.
-
-Sistemos darymo metu išsikelta reikalavimų specifikacija:
-
-\begin{enumerate}
-	\item Programa turi atpažinti ar įvestis yra URL formato.
-	\item Programa turi apdoroti 2** kodų grupę, atsiųsdama failą.
-	\item Gavus 3** grupės kodą, programa turi pakeisti failą gavimo vietą ir failą atsiųsti iš kitur.
-	\item Gavus 4** kodą, programa, nesiunčia nieko ir užbaigia veikimą, išspausdindama pranešimą vartotojui.
-	\item Sėkmingai atsiųsti duomenys, turi būti užsaugomi sukuriant failą darbalaukyje.
-	\item Sukuriamam failui turi būti suteiktas iš URL adreso paimamas pavadinimas.
-	\item Sukuriamas failas neturi gadinti, trinti ar kitaip daryti įtaką prieš tai atsiųstiems failams.
-	\item Failas turi būti atsiunčiamas artima į realaus siuntimo greitį sparta.
-\end{enumerate}
-Dokumento versija: 1.
 
 \section{Įžanga}
 
-Šio darbo tikslas susidaryti planą programos „HTTP Downloader” veikimo testavimui atlikti. 
-Pagal šį planą ištestuoti programinę įrangą ir užfiksuoti rastus defektus. 
+Šio darbo tikslas sudaryti planą užduočių valdymos sistemos veikimo testavimui atlikti.
+Pagal šį planą ištestuoti programinę įrangą ir užfiksuoti rastus defektus.
 Plano lygmuo - „Master“. Planas apima pasirinktos programos testavimą, atitikimą reikalavimams. 
-Biudžeto šiai sistemai nėra, resursai – vienas žmogus, programos kūrėjas ir šio plano autorius. 
-Testavimas pagal šį planą bus vykdomas ne nuo sistemos kūrimo pradžios, nes programa jau egzistuojanti, bet nėra ištestuota. 
+Biudžeto šiai sistemai nėra, resursai – du žmonės, programos kūrėjai yra šio plano autoriai. 
+Testavimas pagal šį planą bus vykdomas nuo sistemos kūrimo pradžios. Sistemai sukurti bus skirta 20 iteracijų po 2 savaites.
+
 
 \section{Testavimo objektai}
 
 Bus testuojama tai kas pateikiama vartotojui naudotis:
 
 \begin{itemize}
-	\item Programinės įrangos paskutinė turima versija (S lygmuo)
-	\item Klaidų apdorojimas (V ir S lygmuo)
-	\item Veikimas su neteisinga įvestimi (S lygmuo)
-	\item Našumas (V lygmuo)
+	\item Vartotojo sąsaja
+	\item Sistemos vientisumas naudojantis keliems vartotojams
+	\item Klaidu apdorojimas
+	\item Našumas
 \end{itemize}
+
 
 \section{Programinės įrangos rizikos}
 
-Kadangi kuriama programinė įranga nėra sudėtinga, visos naudojamos išorinės bibliotekos yra patikimos ir tinkamai veikiančios, rizikos nėra plataus masto. 
-Todėl didžiausia rizikų tikimybė yra paskutinės turimos produkto versijoje. 
-Čia gali būti palikta defektų paskutiniuose darytuose pakeitimuose. 
-Taip pat naudojantis programa kyla rizika dėl valstybinių teisės aktų pažeidimų. 
-Testuojant ir naudojant programinę įrangą, galima mėginti atsisiųsti autorių teisių ginamų ir įstatymais uždraustų - nelegalių duomenų.
+Kadangi užduočių valdymo sistema nėra unikalus produktas, reikės sukurti programinę įrangą,
+kuri savo funkcionalumu bei intuityvia vartotojo sąsaja nukonkuruotų varžoves.
+Išorinės integracijos, kurios bus naudojamos užduočių valdymo sistemoje, yra nusistovėjusios, todėl labai didelės
+rizikos nėra, tačiau sistemoje bus sukurtas integracijų plėtimo taškai lengvam naujovių įdiegimui.
+Naudotojų duomenys bus saugomi duomenų bazėje, todėl yra nedidelė, bet egzistuojanti rizika, kad duomenys gali būti
+prarasti arba nutekinti tretiesiems asmenims.
+
 
 \section{Testuojamos savybės}
 
 Pagal defektų atsiradimo tikimybę programinės įrangos veikimo metu, rizikos lygmenys yra standartiškai suskirstyti į:
 
 \begin{itemize}
-	\item Žemas
-	\item Vidutinis
-	\item Aukštas
+	\item Žemas (Ž)
+	\item Vidutinis (V)
+	\item Aukštas (A)
 \end{itemize}
 
 Iš naudoto pusės bus testuojama:
 
 \begin{itemize}
-	\item Įvestis, kuri gali būti netikras, tikras ir iškraipytas internetinis failo patalpinimo adresas. (Rizikos lygmuo – Ž)
-	\item Programos elgsena gavus skirtingų tipų atsakymo į „GET“ užklausą kodų grupę (2**, 3**, 4**). (Rizikos lygmuo – A)
-	\item Atsiųstų duomenų lokalųjį saugojimą kompiuteryje. (Rizikos lygmuo – V)
+	\item Greitaveika (lygis - V)
+	\item Vartotojo sąsajos aiškumas (lygis - A)
+	\item Sistemos patikimumas (lygis - A)
+	\item Vartotojo sąsajos dizainos (lygis - Ž)
 \end{itemize}
+
 
 \section{Netestuojamos savybės}
 
-Iš vartotojo pusės nebus testuojamos senesnės programinės įrangos versijos, tai kas buvo turima iki dabartinės produkto būsenos. 
-Taip yra todėl, kad senesnės versijos nekelia rizikos dabartinės versijos veikimui. 
-Taip pat, nebus testuojamas programos gaunamų duomenų šifravimas (kodavimas), perkodavimas (konvertavimas) į kitas duomenų kodavimo sistemas. 
-Tai nekelia rizikų, nes atsiųstą failą galima vėliau pakonvertuoti į kitą norimą kodavimo sistemą.
+Iš vartotojo pusės nebus testuojamos senesnės programinės įrangos pvz.: Interneto naršyklių, SSH klientų palaikymas.
+Tai bus daroma dėl to, kad kuriama sistema atitktų naujausius standartus bei gerasias praktikas.
+Tuo pačiu nebus švaistomas brangus programos kūrimo laikas, kuris bus panaudotas programinės įrangos kokybės užtikrinimui
+
 
 \section{Taktika / Priėjimas}
+
+Pagal 'Agile' metodologiją, nustatoma, kad sprintas truks 2 savaites.
+Kiekvieno sprinto pabaigoje bus įvykdomas demo ir retrospektyvos,
+kurių metu bus aptariamos praėjusio sprinto teigiami ir neigiami aspektai.
+Kadangi prie sistemos dirbs tik du žmonės kasdieniniai susitikimai bus pakeisti pokalbiais prie kavos.
+
+Sistemos kūrimui naudosime: IntelliJ IDEA Ultimate, Git, MongoDB, JavaScript, Windows 10 bei Ubuntu operacines sistemas.
+
+
+
+
+
+
+
+
+
+
+
+
 
 Kadangi prie šio projekto dirba ir programos kūrimu užsiima vienas žmogus, tai vienas atliks ir testavimą.
 
