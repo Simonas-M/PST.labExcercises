@@ -252,45 +252,30 @@
     Jeigu dėl nenumatytų aplinkymių trūks ar nebus žmonių gebančių atlikti sistemos kūrimo ar testavimo darbus, 
      suderinus su užsakovu paliekama galimybė darbus sustabdyti ar atidėti kol bus gauta pakankamai žmogiškųjų išteklių sistemai pabaigti. 
 
-    Jeigu trūks įrankių ar duomenų ir neturint galimybės per 2 savaites jų bus sumažintas atliekamų testų skaičius, prailginamos darbo valandos, kad įgyti papildomų žinių, gauti reikiamų duomenų ir įrankių.
+    Jeigu trūks įrankių ar duomenų testi sistemos kūrimo ar testavimo darbus ir neturint galimybės per 2 savaites gauti visus reikiamas resursus,
+     gali būti mažinama sistemos apimtis, sistemoje paliekant plėtimo galimybes pilnam reikalavimų įgyvendinimui vėlesnėsę iteracijose, 
+     kai bus gauta pakankamai resursų pilnai įgyvendinti reikalavimus.
 
-    Jeigu vėluos programavimas, likus savaitei iki atsiskaitymo datos, bus sumažintas atliekamų testų skaičius, padidintas priimtinas defektų skaičius, prailginamos darbo valandos. Viso to būtų imamasi, kad visi darbai būtų pilnai užbaigti iki atsiskaitymo datos.
-
-    Jeigu keisis reikalavimai, likus savaitei iki atsiskaitymo datos, nukelta testavimo pabaigos data viena diena tolyn, padidintas priimtinas defektų skaičius, prailginamos darbo valandos. Viso to būtų imamasi, kad iki atsiskaitymo datos, būtų užtikrintas atitikimas visiems pasikeitusiems reikalavimams.
+    Jeigu keisis reikalavimai jau suderinitoms projekto dalims, priklausomai nuo pakeitimų dydžio, gali būti atsisakyta dalies dar įgyvendintų funckijų.
+     Tai daroma norint užtikrinti kad darbai bus pabaigti laiku ir būtų užtikrintas sistemos atitikimas visiems pasikeitusiems reikalavimams.
 
     \section{Patvirtinimai}
-
-    Testavimo plano korektiškumą patvirtins jo sudarymui vadovaujantis dėstytojas (darbo vadovas).
+    Projekto korektiškumą ir išbaigtumą kiekvieno sprinto pabaigoje patvirtins programuotojų ir testuotojų susitikimas. 
+    Pagal programos kurėjų ir užsakovų poreikius, bet ne rečiau kaip kas mėnesį bus organizuojami sistemos funkcionalumo pristatymai 
+     dalyvaujant užsakovams ir sistemos kūrėjams, kurių metu bus verfikuojamas ir validojamas sukurtas funkcionalumas, derinami pakeitimai.
 
     \section{Žodynėlis}
 
     Sąvokos:
-
     \begin{itemize}
-    	\item HTTP 1.1 Standartas - standartinis būdas informacijai pasauliniame internetiniame tinkle (WWW) pasiekti. 
-    		  Pradinė protokolo paskirtis – pateikti standartinį būdą HTML puslapiams skelbti ir skaityti.
-    	\item Pasaulinis internetinis tinklas (WWW) - interneto dalis, resursai, kuriuos internete galima pasiekti naudojant URL (Vieningus Resursų Identifikatorius).
-    		  Pasaulinis tinklas daugiausia remiasi hipertekstu – HTTP protokolu ir HTML kalba.
-    	\item Hiperteksto žymėjimo kalba (HTML) - tai kompiuterinė žymėjimo kalba, naudojama pateikti turinį internete.
-    	\item Dokumento adreso lokatorius (URL) - tai unikalus adresas, nurodantis kur yra patalpintas internetinis puslapis ir kaip jį pasiekti.
-    	\item ,,Master'' lygmuo - Testavimo plano lygmuo, nurodantis, kaip bus vykdomas visas testavimo planas bei kad bus kuriami testavimo etapų planai.
-    
+    	\item 'Master' lygmuo - Testavimo plano lygmuo, nurodantis, kaip bus vykdomas visas testavimo planas bei kad bus kuriami testavimo etapų planai.
+      \item 'Judrioji' metadologija - programų sistemų kūrimo praktika, kai apibrėžtas produkto kūrimo kaina ir trukmė, bet dėl galimų reikalavimų pakitimų neapibrežtas rezultatas.
+       Paprastai produktas kuriamas ir diegimas etapais, kiekvieno metu prisitaikant prie paskitusių reikalavimų.
+      \item Sprintas - viena fiksuoto laiko darbų iteracija. 
     \end{itemize}
 
     Sutrumpinimai:
-
     \begin{itemize}
-    	\item HTTP - trumpinys iš angl. HyperText Transfer Protocol
-    	\item WWW - trumpinys iš angl. World Wide Web
-    	\item HTML - trumpinys iš angl. Hyper text Markup Language
-    	\item URL - trumpinys iš angl. Uniform Resource Locator
-    	\item Testavimo lygmenys:
-    		\begin{itemize}
-    			\item V - vienetų
-    			\item I - integracijos
-    			\item S - sistemos
-    			\item P - priėmimo
-    		\end{itemize}
     	\item Rizikų lygmenys:
     		\begin{itemize}
     			\item Ž - žemas
