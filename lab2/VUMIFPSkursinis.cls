@@ -4,7 +4,7 @@
 %% Latest version available here: https://github.com/LIKS/course_work_template_vu_mif_se
 %% Any suggestions or contributions are welcome!  Also see: http://latex.liks.lt!
 %
-%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/) 
+%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/)
 % You are free to (a) share - copy and redistribute the material in any medium
 % or format (b) adapt - remix, transform, and build upon the material for any
 % purpose, even commercially. As long as you give appropriate credit, provide a
@@ -45,7 +45,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \lhead{}
 \chead{}
-\rhead{} 
+\rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage} % Numeris bus puslapio apačioje dešinėje
@@ -125,7 +125,9 @@
      \null\vfil
      \vskip 2.5cm
      {\singlespacing \LARGE \textbf{\@title} \par}
-     {\singlespacing \Large \textbf{\@titleineng} \par}
+     \ifdefined\@titleineng
+        {\singlespacing \Large \textbf{\@titleineng} \par}
+     \fi
      \vskip 0.8cm
      {\large \@papertype}
   \end{center}
@@ -199,24 +201,25 @@
     \begin{flushright}
         \large
         \singlespacing
-        {\begin{tabular}[t]{l l}%
-        \medskip Atliko: &\; \@status \\
-        \medskip   &\; \@author \hfill \@signatureplace \\
-        \medskip &\; \@secondauthor \hfill \@signatureplace \\
-        \medskip &\; \@thirdauthor \hfill \@signatureplace \\
-        \medskip &\; \@fourthauthor \hfill \@signatureplace \\
-        \medskip\bigskip &\; \@fifthauthor \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill \@signatureplace \\
+        {\begin{tabular}[t]{l l r}%
+        \medskip Atliko: &\; \@status  &\\
+        \medskip   &\; \@author & \hfill \@signatureplace \\
+        \medskip &\; \@secondauthor & \hfill \@signatureplace \\
+        \medskip &\; \@thirdauthor & \@signatureplace \\
+        \medskip &\; \@fourthauthor & \@signatureplace \\
+        \medskip\bigskip &\; \@fifthauthor & \@signatureplace \\
+        \bigskip Darbo vadovas: & \@supervisor & \@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
     \end{flushright}
     \vskip 3.2cm
   }
-  
-  \begin{center}
 
+  \begin{center}
   {
-    \singlespacing Versija: \@version \par
+    \ifdefined\@version
+      \singlespacing Versija: \@version \par
+    \fi
     \singlespacing \@date \par
   }
   \end{center}\par
@@ -238,6 +241,7 @@
   \global\let\@papertype\@empty
   \global\let\@supervisor\@empty
   \global\let\@reviewer\@empty
+  \global\let\@version\@empty
   \global\let\title\relax
   \global\let\author\relax
   \global\let\date\relax
@@ -254,7 +258,7 @@
 % Skyriaus pavadinimas, turinyje neturintis numerio
 \newcommand{\sectionnonum}[1]{%
     \section*{#1}%
-    \addcontentsline{toc}{section}{#1}% 
+    \addcontentsline{toc}{section}{#1}%
 }
 
 % Skyriaus pavadinimas, neturintis numerio bei neįeinantis į turinį
@@ -316,7 +320,7 @@
     }%
     \setcounter{section}{0}%
     \renewcommand{\thesection}{nr. \arabic{section}}%
-    % Insert record to TOC 
+    % Insert record to TOC
     \addcontentsline{toc}{section}{\MakeUppercase{Priedai}}%}
 }
 
